@@ -1,0 +1,126 @@
+
+
+/*css*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Header Section */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo h1 {
+    color: #ffe4e1;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffe4e1;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), 
+                url('hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding-top: 70px; /* To ensure the navbar doesn't overlap */
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.320);
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.069);
+    box-shadow:inset 6px 6px 6px rgb(0, 0, 0);
+    backdrop-filter: blur(1px);
+}
+
+.hero h2 {
+    font-size: 62px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 28px;
+    font-weight: 300;
+    color: #f1f1f1;
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        padding: 10px 20px;
+        border-radius: 8px;
+        display: none; /* Add toggle menu functionality later */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    header .logo {
+        flex: 1;
+    }
+}
